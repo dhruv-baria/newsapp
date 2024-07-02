@@ -59,8 +59,8 @@ const NewsItem = (props) => {
         onLoaderFinished={() => setProgress(0)}
       />
       <div className='flex flex-wrap justify-center'>
-        {listNews?.map((news,id) => (
-          <Cards key={id} resData={news}/>
+        {listNews?.map((news) => (
+          <Cards resData={news}/>
         ))
 
         }
