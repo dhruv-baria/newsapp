@@ -14,7 +14,7 @@ const NewsItem = (props) => {
 
   useEffect(() => {
     fetchData();
-  },[] );
+  },[]);
 
   const fetchData = async () => {
     const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=b4fcd9b030c7442ba3ffd70e846fcb3f&page=1&pageSize=10`);
@@ -59,8 +59,8 @@ const NewsItem = (props) => {
         onLoaderFinished={() => setProgress(0)}
       />
       <div className='flex flex-wrap justify-center'>
-        {listNews?.map((news) => (
-          <Cards resData={news}/>
+        {listNews?.map((news,i) => (
+          <Cards key={i} resData={news}/>
         ))
 
         }
