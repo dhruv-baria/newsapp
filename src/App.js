@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-        <Route path="/" element = {<NewsItem key="start" country="in" category="general" />}exact />
+        <Route path="/newsapp" element = {<NewsItem key="start" country="in" category="general" />}exact />
           <Route path="/general" element = {<NewsItem key="general" country="in" category="general" />}exact />
           <Route path="/business" element ={ <NewsItem key="busines" country="in" category="business" />}exact />
           <Route path="/entertainment" element = {<NewsItem key="entertainment" country="in" category="entertainment" />}exact />
