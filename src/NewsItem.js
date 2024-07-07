@@ -14,7 +14,7 @@ const NewsItem = (props) => {
 
   useEffect(() => {
     fetchData();
-  },[]);
+  },);
 
   const fetchData = async () => {
     const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=b4fcd9b030c7442ba3ffd70e846fcb3f&page=1&pageSize=10`);
